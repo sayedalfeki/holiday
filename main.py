@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from routers import hrholiday, users,items,file
-from routers.products import products
+ from fastapi.middleware.cors import CORSMiddleware
+# from routers import hrholiday, users,items,file
+# from routers.products import products
 app=FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -15,11 +15,11 @@ def welcomeApp():
     return {
         'greeting':'welcome to our app'
     }
-app.include_router(users.router)
-app.include_router(items.router)
-app.include_router(products.router)
-app.include_router(file.router)
-app.include_router(hrholiday.router)
+# app.include_router(users.router)
+# app.include_router(items.router)
+# app.include_router(products.router)
+# app.include_router(file.router)
+# app.include_router(hrholiday.router)
 
 # import pandas as pd
 # app=FastAPI()
