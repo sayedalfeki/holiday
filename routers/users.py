@@ -26,3 +26,8 @@ def loginUser(name:Annotated[str,Form()],password:Annotated[str,Form()]):
         'name':name,
         'password':password
     }
+@router.get('/users/test')
+def testUser():
+    return {
+        'test':True
+    }
